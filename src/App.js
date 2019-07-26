@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import AppBar from './components/layout/AppBar'
 import Candidates from './components/Candidates';
+import { width } from '@material-ui/system';
 
 
 class App extends Component{
@@ -11,19 +12,22 @@ class App extends Component{
       "Name": "Test Test",
       "id": 1,
       "title": "delectus aut autem",
-      "party": "Democrat"
+      "party": "Democrat",
+      "pic": '/trump.jpg'
     },
     {
       "Name": "George Bush",
       "id": 2,
       "title": "quis ut nam facilis et officia qui",
-      "party": "Democrat"
+      "party": "Democrat",
+      "pic": '/trump.jpg'
     },
     {
       "Name": "Donald Trump",
       "id": 3,
       "title": "fugiat veniam minus",
-      "party": "Democrat"
+      "party": "Democrat",
+      "pic": '/trump.jpg'
     }]
   }
 

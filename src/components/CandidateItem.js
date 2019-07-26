@@ -7,6 +7,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import img from '../static/images/trump.jpg'
+
+
 
 const useStyles = makeStyles({
     card: {
@@ -20,18 +23,21 @@ const useStyles = makeStyles({
   export class  CandidateItem extends Component{
     //  classes = useStyles();
       render(){
-  
+  console.log(img);
     return (
       <Card className={{maxWidth: 345}}>
         <CardActionArea>
-          <CardMedia
-            className={{height: 140}}
-            image="/static/images/cards/contemplative-reptile.jpg"
-            title="Contemplative Reptile"
-          />
+            
+        <CardMedia
+        style = {{ height: 0, paddingTop: '56%'}}
+        image= {require('../static/images/trump.jpg')}
+        /> 
+        
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
             {this.props.candidate.Name}
+            <br/>
+            {/* <img width={200} src={"images/" + this.props.candidate.pic} /> */}
             </Typography>
             
             {/* <Typography variant="body2" color="textSecondary" component="p" >
@@ -44,7 +50,7 @@ const useStyles = makeStyles({
         </CardActionArea>
         <CardContent>
             <h5>
-                Party: 
+                Party: {this.props.candidate.party}
                 <br/>
                 Leans: Left
                 <br/>
